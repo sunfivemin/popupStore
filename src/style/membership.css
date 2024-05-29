@@ -1,0 +1,134 @@
+@charset "utf-8";
+/*
+ * Name     : membership.css
+ * Version  : 1.1
+ * Author   : onepixel studio
+ * Date     : 2023-04-07
+ * Table of contents
+ * ------------------------------------------------------
+ * 01) Common
+ * 02) Login
+ * 03) Register
+ * 04) Media queries
+ */
+
+/* *********************************************
+ * Common
+ ******************************************** */
+.button-member-confirm {display: flex; width: 100%; height: 60px; padding: 0 16px; font-size: 18px; font-weight: 600; color: var(--white-100); letter-spacing: -0.02em; border: 0; border-radius: 0; background: var(--main); align-items: center; justify-content: center; outline: 0 !important}
+
+/* *********************************************
+ * Login
+ ******************************************** */
+.member-login {background-color: var(--white-f2f2f2)}
+.member-login .login-container {max-width: 1000px; margin: auto}
+/* .member-login .login-outer-box {border-radius: 30px; box-shadow: 0 8px 24px rgba(0,0,0,.08); overflow: hidden} */
+.member-login .login-outer-box {background-color: var(--white-100); overflow: hidden}
+.member-login .col-left {background-color: var(--gray-300)}
+.member-login .col-left .left-container {padding: 80px 64px}
+.member-login .col-left .left-container h3 {font-size: 28px; font-weight: 700; color: var(--white-100); letter-spacing: -0.02em; line-height: 1.32; margin-top: 200px}
+.member-login .col-right .right-container {padding: 0 64px}
+.member-login .col-right .service-link {font-size: 0; text-align: center; padding-top: 24px}
+.member-login .col-right .service-link a {display: inline-block; font-size: 15px; color: var(--gray-300); letter-spacing: -0.02em}
+.member-login .col-right .service-link a + a::before {content: ''; display: inline-block; width: 1px; height: 12px; margin: 0 16px; background-color: var(--gray-100); vertical-align: -1px}
+
+/* *********************************************
+ * Register
+ ******************************************** */
+.member-register {background-color: var(--white-f2f2f2)}
+.member-register .register-container {max-width: 800px; margin: auto}
+.member-register .step-indicator {display: flex; margin-bottom: 64px; justify-content: center}
+.member-register .step-indicator li {position: relative; display: flex; width: 160px; flex-direction: column; align-items: center; justify-content: center}
+.member-register .step-indicator li .count {position: relative; display: flex; width: 28px; height: 28px; font-size: 14px; font-weight: 700; color: #ccc; margin-bottom: 16px; border: 2px solid var(--gray-100); border-radius: 50%; background-color: var(--white-100); align-items: center; justify-content: center; z-index: 5}
+.member-register .step-indicator li p {font-size: 18px; font-weight: 500; color: var(--gray-300); letter-spacing: -0.02em}
+.member-register .step-indicator li.active .count {color: var(--main); border-color: var(--main)}
+.member-register .step-indicator li.active p {color: var(--main)}
+.member-register .step-indicator li.complete .count {color: var(--white-100); border-color: var(--main); background-color: var(--main)}
+.member-register .step-indicator li.complete p {color: var(--main)}
+.member-register .step-indicator li + li::before {content: ''; position: absolute; top: 12px; left: -50%; width: 100%; height: 2px; background-color: rgba(0,0,0,.08); z-index: 1}
+.member-register .register-outer-box {padding: 80px 100px; background-color: var(--white-100)}
+.member-register .register-heading {font-size: 28px; font-weight: 600; color: var(--main); letter-spacing: -0.02em; margin-bottom: 40px}
+
+.member-register .term-check-all {position: relative; display: -ms-flexbox; display: flex; margin-bottom: 36px; align-items: center}
+.member-register .term-check-all .custom-check {position: absolute; top: 50%; left: 24px; margin: -12px 0 0; border: 0; appearance: none; -webkit-appearance: none; -moz-appearance: none; outline: 0}
+.member-register .term-check-all .custom-check::before {content: ''; position: absolute; top: 0; left: 0; width: 24px; height: 24px; border: 1px solid var(--gray-100); background-color: var(--white-100); transition: border-color .1s ease-in-out, background-color .1s ease-in-out; cursor: pointer}
+.member-register .term-check-all .custom-check::after {content: ''; position: absolute; top: 6px; left: 6px; width: 12px; height: 8px; border: 2px solid var(--main); border-top: none; border-right: none; border-radius: 1px; opacity: 0; transform: rotate(-45deg); transition: opacity .1s ease-in-out}
+.member-register .term-check-all > label {display: block; width: 100%; padding: 24px 28px 24px 62px; font-size: 18px; font-weight: 500; color: var(--gray-300); color: var(--gray-300); letter-spacing: -0.02em; line-height: 1.55; margin-bottom: 0; cursor: pointer; border: 1px solid var(--gray-100); background-color: var(--white-f2f2f2); box-shadow: 0 2px 4px rgba(0,0,0,.06)}
+.member-register .term-check-all .custom-check:not(:disabled):hover::before, .member-register .term-check-all .custom-check:not(:disabled):focus::before {border-color: var(--gray-300); background-color: var(--white-f2f2f2)}
+.member-register .term-check-all .custom-check:disabled::before {border-color: var(--gray-100); background-color: var(--white-f2f2f2)}
+.member-register .term-check-all .custom-check:disabled ~ label {color: var(--gray-200)}
+.member-register .term-check-all .custom-check:checked::before {border-color: var(--main) !important; background-color: var(--white-f2f2f2) !important}
+.member-register .term-check-all .custom-check:checked::after {opacity: 1}
+.member-register .term-check-all .custom-check:checked ~ label {color: var(--main); border-color: var(--gray-300); background-color: var(--white-f2f2f2)}
+.member-register .term-group + .term-group {margin-top: 64px}
+.member-register .term-group .term-heading {font-size: 19px; font-weight: 600; color: var(--main); letter-spacing: -0.02em; margin-bottom: 16px}
+.member-register .register-step-buttons {padding-top: 60px}
+.member-register .register-group-heading {font-size: 20px; font-weight: 600; color: var(--main); letter-spacing: -0.02em; margin-bottom: 20px; padding-bottom: 12px; border-bottom: 2px solid var(--main)}
+.member-register .table-join-form, .member-register .table-join-form > tbody, .member-register .table-join-form > tbody > tr, .member-register .table-join-form > tbody > tr > td {display: block; width: 100%}
+.member-register .table-join-form > tbody > tr {height: auto !important; margin-bottom: 1.5rem}
+.member-register .table-join-form > tbody > tr > td {display: flex; font-family: inherit !important; font-size: 14px; color: var(--gray-200); letter-spacing: -0.02em; text-align: left !important; background-color: var(--white-100) !important; gap: 8px; flex-wrap: wrap}
+.member-register .table-join-form > tbody > tr[data-column='이메일'] > td, .member-register .table-join-form > tbody > tr[data-column='생년월일'] > td {flex-wrap: nowrap; align-items: center}
+.member-register .table-join-form .member_td_bgcolor {font-size: 16px; font-weight: 500; color: var(--main); margin-bottom: 8px}
+.member-register .table-join-form td span {display: block; width: 100%}
+.member-register .table-join-form .member_border, .member-register .table-join-form select {display: block; width: 100%; height: 54px; font-family: inherit !important; font-size: 1rem; color: var(--gray-300); letter-spacing: -0.02em; line-height: 1.5; padding: 6px 16px; border: 1px solid var(--gray-100); border-radius: 0; outline: 0; transition: .3s}
+.member-register .table-join-form .member_border:focus, .member-register .table-join-form select:focus {border-color: var(--primary); box-shadow: 0 0 0 2px var(--primary)}
+.member-register .table-join-form .member_border::placeholder {color: var(--gray-200)}
+.member-register .table-join-form select {padding-right: 3rem; appearance: none; -webkit-appearance: none; background-image: url(../images/common/select_dropdown_arrow.svg); background-position: right 1rem center; background-size: 1rem 1rem; background-repeat: no-repeat}
+.member-register .table-join-form select::-ms-expand {display: none}
+.member-register .table-join-form .member_txt {font-family: inherit !important; font-size: inherit !important}
+.member-register .table-join-form .member_txt td {padding-right: 20px}
+.member-register .table-join-form .member_txt td input[type='radio'], .member-register .table-join-form .member_txt td input[type='checkbox'] {margin-right: 6px}
+.member-register .info-header {margin-bottom: 48px}
+.member-register .info-header h4 {font-size: 24px; font-weight: 700; color: var(--main); letter-spacing: -0.02em; margin-bottom: 16px}
+.member-register .info-header p {font-size: 17px; font-weight: 500; color: var(--main); letter-spacing: -0.02em; line-height: 1.45}
+.member-register .info-summary li {display: flex; padding: 1.25rem 0; border-bottom: 1px solid #e9e9e9; flex-wrap: wrap; align-items: center}
+.member-register .info-summary li > b, .member-register .info-summary li > p {font-size: 1rem; letter-spacing: -0.02em; line-height: 1.6}
+.member-register .info-summary li > b label {margin-bottom: 0}
+.member-register .info-summary li > b {width: 5.625rem; font-weight: 700; color: var(--main)}
+.member-register .info-summary li > p {flex-basis: 0; max-width: 100%; color: var(--gray-300)}
+.member-register .label-form {display: block; font-size: 16px; font-weight: 500; color: var(--main); letter-spacing: -0.02em; width: 100%; margin-bottom: 8px}
+.member-register .small-desc {font-size: 14px; color: var(--gray-200); letter-spacing: -0.02em; margin-top: 12px}
+.member-register .result-content p {color: var(--gray-300); letter-spacing: -0.02em; line-height: 1.8}
+.member-register .result-content p b {font-weight: 700; color: var(--main)}
+
+/* *********************************************
+ * Media queries
+ ******************************************** */
+@media (max-width: 991px) {
+    .member-login .col-left .left-container {padding: 64px 48px}
+    .member-login .col-left .left-container .logo {width: 140px}
+    .member-login .col-left .left-container h3 {font-size: 24px; margin-top: 160px}
+    .member-login .col-right .right-container {padding: 0 48px}
+}
+
+@media (max-width: 767px) {
+    .member-login .col-left .left-container {padding: 32px}
+    .member-login .col-left .left-container .logo {width: 120px}
+    .member-login .col-left .left-container h3 {font-size: 21px; margin-top: 48px}
+    .member-login .col-right .right-container {padding: 32px}
+
+    .member-register .step-indicator {margin-bottom: 48px}
+    .member-register .step-indicator li .count {margin-bottom: 12px}
+    .member-register .step-indicator li p {font-size: 14px}
+    .member-register .register-outer-box {padding: 48px}
+    .member-register .register-heading {font-size: 22px; margin-bottom: 32px}
+    .member-register .term-check-all > label {font-size: 16px}
+    .member-register .term-group + .term-group {margin-top: 48px}
+    .member-register .register-group-heading {font-size: 17px; padding-bottom: 10px}
+    .member-register .table-join-form .member_td_bgcolor {font-size: 14px}
+    .member-register .small-desc {font-size: 12px; margin-top: 8px}
+}
+
+@media (max-width: 575px) {
+    .member-login .col-left .left-container {padding: 28px}
+    .member-login .col-left .left-container h3 {font-size: 19px}
+    .member-login .col-right .right-container {padding: 32px 28px}
+    .member-login .col-right .service-link {padding-top: 16px}
+    .member-login .col-right .service-link a {font-size: 14px}
+    .member-login .col-right .service-link a + a::before {margin: 0 10px}
+    .button-member-confirm {font-size: 16px}
+
+    .member-register .register-outer-box {padding: 28px}
+    .member-register .term-check-all > label {font-size: 15px; padding: 20px 16px 20px 64px}
+    .member-register .term-group + .term-group {margin-top: 32px}
+}

@@ -1,0 +1,16 @@
+@charset "utf-8";
+/*
+ * Name     : membership.css
+ * Version  : 1.0
+ * Author   : onepixel studio
+ * Date     : 2022-11-09
+ * Table of contents
+ * ------------------------------------------------------
+ * 01) Login
+ * 02) Register
+ */
+
+/* *********************************************
+ * Login
+ ******************************************** */
+.member-login .login-outer-box {border-radius: 30px; box-shadow: 0 8px 24px rgba(0,0,0,.08); overflow: hidden}
