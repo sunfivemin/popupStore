@@ -63,6 +63,9 @@
         <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
         <!-- JS -->
         <script src="./src/js/main.js"></script>
+        
+        <script type="text/javascript" src="//dapi.kakao.com/v2/maps/sdk.js?appkey=bad878eaa77e994f59932548f5cbd124"></script>
+
 
         <!-- Local JS Files -->
         <!-- <script src="./src/js/common.min.js" charset="utf-8"></script>
@@ -299,6 +302,26 @@
             </section>
             <!-- .about-core-value -->
 
+            <!-- .about-overview -->
+            <section class="section about-overview">
+                <div class="container-xl">
+                    <!-- .section-main-heading -->
+                    <div class="section-main-heading" data-aos="fade-left" data-aos-duration="3000">
+                        <h2>팝업 위치</h2>
+                        <h4>서울 마포구 양화로 140 9층 ECF</h4>
+                    </div>
+                    <!-- .section-main-heading -->
+
+                    <!-- .row-overview -->
+                    <div class="row row-overview mx-lg-n5 align-items-lg-center">
+                        <div id="map" style="width: 100%; height: 400px;"></div>
+                    </div>
+                    <!-- .row-overview -->
+                </div>
+            </section>
+            <!-- .about-overview -->
+
+
             <div class="sub-common-banner">
                 <div class="container-xl">
                     <div class="banner-box">
@@ -316,6 +339,8 @@
                     </div>
                 </div>
             </div>
+
         </main>
     </body>
+    
 </html>
