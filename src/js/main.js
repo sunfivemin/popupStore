@@ -20,33 +20,33 @@ document.addEventListener("DOMContentLoaded", function (event) {
 });
 
 $(function () {
-    // Initialize Swiper
-    // var mainSwiper = new Swiper(".main-swiper", {
-    //     autoplay: { delay: 4000, disableOnInteraction: false },
-    //     speed: 800,
-    //     loop: true,
-    //     effect: "creative",
-    //     creativeEffect: { prev: { translate: [0, 0, -400] }, next: { translate: ["100%", 0, 0] } },
-    //     navigation: { nextEl: ".main-slide .swiper-button-next", prevEl: ".main-slide .swiper-button-prev" },
-    //     pagination: {
-    //         el: ".main-slide .swiper-pagination",
-    //         type: "fraction",
-    //         clickable: true,
-    //         formatFractionCurrent: function (number) {
-    //             return ("0" + number).slice(-2);
-    //         },
-    //         formatFractionTotal: function (number) {
-    //             return ("0" + number).slice(-2);
-    //         },
-    //     },
-    // });
 
-    // // Sync text box with Swiper slide
-    // mainSwiper.on("slideChange", function () {
-    //     var currentIndex = mainSwiper.realIndex + 1;
-    //     $(".text-box").removeClass("on");
-    //     $(".text-box[data-slide='" + currentIndex + "']").addClass("on");
-    // });
+    var mainSwiper = new Swiper(".main-swiper", {
+        autoplay: { delay: 4000, disableOnInteraction: false },
+        speed: 800,
+        loop: true,
+        effect: "creative",
+        creativeEffect: { prev: { translate: [0, 0, -400] }, next: { translate: ["100%", 0, 0] } },
+        navigation: { nextEl: ".main-slide .swiper-button-next", prevEl: ".main-slide .swiper-button-prev" },
+        pagination: {
+            el: ".main-slide .swiper-pagination",
+            type: "fraction",
+            clickable: true,
+            formatFractionCurrent: function (number) {
+                return ("0" + number).slice(-2);
+            },
+            formatFractionTotal: function (number) {
+                return ("0" + number).slice(-2);
+            },
+        },
+    });
+
+    // Sync text box with Swiper slide
+    mainSwiper.on("slideChange", function () {
+        var currentIndex = mainSwiper.realIndex + 1;
+        $(".text-box").removeClass("on");
+        $(".text-box[data-slide='" + currentIndex + "']").addClass("on");
+    });
 
     var mySwiper = new Swiper(".mySwiper", {
         slidesPerView: 1,
@@ -75,6 +75,10 @@ $(function () {
         },
     });
 
+    
+
+
+
     // 카카오 지도
     var mapContainer = document.getElementById("map"), // 지도를 표시할 div
         mapOption = {
@@ -101,3 +105,4 @@ $(function () {
     // 마커가 지도 위에 표시되도록 설정합니다
     marker.setMap(map);
 });
+

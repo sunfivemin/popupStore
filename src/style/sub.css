@@ -17,6 +17,49 @@
  * 09) Terms
  * 10) Media queries
  */
+/* *********************************************
+ * POPUPSTORE
+ ******************************************** */
+ .intro-section { background: #000; padding: 90px 0 0; height: 660px;}
+ .intro-section .section-wrap { position: relative; /*isolation: isolate;*/display: flex; align-items: center; text-align: center; height: 100%; max-width: 1280px; margin: 0 auto; background: url("../images/sub/popup-banner-img.png");background-size: 680px; background-repeat: no-repeat; background-position: 55% 20%;} 
+ /* .intro-section .section-wrap::after { content: ''; position: absolute; background: #000; z-index: -1; inset: 0; opacity: 0.6; } */
+ .intro-section .section-wrap .text-wrap { margin: 0 auto 0; padding: 0 48px;}
+ .intro-section .section-wrap .text-wrap .tit {color: #fff; font-size: 56px; font-weight: 400;  line-height: 1;}
+ .intro-section .section-wrap .text-wrap .tit .tit_sub {display: block; font-weight: 800;}
+ .intro-section .section-wrap .text-wrap .txt {color: #C8EC00;  font-size: 40px; font-weight: 600; padding-top: 40px; line-height: 1.5;}
+ .tab-wrap {width: 100%;background-color: #fff;    border-bottom: 1px solid #000;}
+ .tab-wrap ul {padding-left: 0; max-width: 100%;margin: 0 auto;display: flex;flex-direction: row;/*border-left: 1px solid #000;border-right: 1px solid #000;*/}
+ .tab-wrap ul li { cursor: pointer; font-size: 28px; font-weight: 600; padding: 42px 16px 42px; background: #fff;text-align: center; position: relative; flex: 1;}
+ .tab-wrap ul li.subscribe {background-color: #C8EC00; color: #191919;}
+ .tab-wrap ul li.introduction {background-color: #333333; color: #fff;}
+ 
+ .slide-section { width: 100%; }
+ .slide-section .section-wrap { height: 100%; max-width: 1280px; margin: 0 auto; }
+ .slide-section .text-wrap {display: flex; flex-direction: column; margin: 80px 0 10px;}
+ .slide-section .text-wrap .slide-tit {font-size: 48px; font-weight: 800;}
+ .slide-section .text-wrap .slide-txt {font-size: 20px; font-weight: 400;}
+ .slide-section .slide-wrap {display: flex; align-items: center;width: 100%;height: 60px; background-color: #000;}
+ .slide-section .slide-wrap .slide {
+    width: 100%;
+    height: 60px;
+    background-position: 0 0;
+    margin: 0 0;
+    background: url("../images/sub/moving-banner.png") 0 / 3000px repeat-x;
+    background-size: auto 28px;
+    -webkit-animation: slideRight 100s linear infinite;
+    animation: slideRight 100s linear infinite;}
+
+
+ @keyframes slideRight {
+    from {
+      background-position: -3000px
+    }
+  
+    to {
+      background-position: 0
+    }
+  }
+
 
 /* *********************************************
  * Hero

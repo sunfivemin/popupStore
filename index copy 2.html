@@ -73,40 +73,120 @@
             <script src="./src/js/sub.min.js" charset="utf-8" ></script> -->
     </head>
     <body>
-        <main role="main" id="main">
-            <section class="intro-section">
-                <div class="section-wrap">
-                    <div class="text-wrap">
-                        <h1 class="tit">POP-UP STORE <span class="tit_sub">in HONGDAE</span></h1>
-                        <p class="txt">2024.06 Grand Open!</p>
+        <section class="main-slide ecf-banner-area2 container-fluid">
+            <div class="row">
+                <div class="swiper mySwiper" data-aos="fade-up" data-aos-duration="1000">
+                    <div class="swiper-wrapper">
+                        <div class="swiper-slide dark">
+                            <div class="ecf-banner-container row">
+                                <div class="ecf-main-text text-box" data-slide="1">
+                                    <strong class="ecf-fade-box box-1 hidden-box box01">POP-UP STORE</strong>
+                                    <h2 class="ecf-fade-box box-2 hidden-box box02">in HONGDAE</h2>
+                                    <p class="ecf-fade-box box-3 hidden-box box02">팝업에서의 제품 판매가 끝이 아닌 글로벌 종합 쇼핑 플랫폼 ECF에서 지속가능성을 확인하세요.</p>
+                                    <div class="ecf-btn-container">
+                                        <div class="ecf-btn-wrap"><a href="https://docs.google.com/forms/u/1/d/11S3BYZrXSit6gO_VyGcWJDXTCfvyYoQVrWcc8tOg3kg/edit?usp=drive_web" target="_blank" class="btn ecf-btn ecf-btn-01">팝업 스토어 신청</a></div>
+                                        <div class="ecf-btn-wrap"><a href="{{$template}}/img/onepixel/images/common/ecf-introduction.pdf" class="btn ecf-btn ecf-btn-02" target="_blank">팝업 소개서</a></div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="swiper-slide white">
+                            <div class="ecf-banner-container row">
+                                <div class="ecf-main-text" data-slide="2">
+                                    <strong class="ecf-fade-box box-1">소비 습관 트렌드의 변화,</strong>
+                                    <h2 class="ecf-fade-box box-2">새로운 스타일 커머스</h2>
+                                    <p class="ecf-fade-box box-3">ECF는 고객에게는 합리적인 소비를, 판매자에게는 최고의 판매 경로를 제공하는, One Way 쇼핑 플랫폼으로 전 세계 사용자와 파트너를 연결 합니다.</p>
+                                    <div class="ecf-btn-container">
+                                        <div class="ecf-btn-wrap"><a href="https://docs.google.com/forms/u/1/d/11S3BYZrXSit6gO_VyGcWJDXTCfvyYoQVrWcc8tOg3kg/edit?usp=drive_web" target="_blank" class="btn ecf-btn ecf-btn-01">입점 신청</a></div>
+                                        <div class="ecf-btn-wrap"><a href="{{$template}}/img/onepixel/images/common/ecf-introduction.pdf" class="btn ecf-btn ecf-btn-02" target="_blank">매체 소개서</a></div>
+                                        <div class="ecf-btn-wrap"><a href="{{$template}}/img/onepixel/images/common/ecf-food.pdf" class="btn ecf-btn ecf-btn-02" target="_blank">매체 소개서 - 푸드</a></div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
                     </div>
+
+                    <!-- If we need navigation buttons 
+                                        <div class="circle-button swiper-button-prev">
+                                            <i class="bi bi-arrow-left"></i>
+                                        </div>
+                                        <div class="circle-button swiper-button-next">
+                                            <i class="bi bi-arrow-right"></i>
+                                        </div>-->
+
+                    <div class="main-swiper-btn swiper-button-prev"></div>
+                    <div class="swiper-pagination font-main-slide"></div>
+                    <div class="main-swiper-btn swiper-button-next"></div>
                 </div>
-            </section>
-            <div class="tab-wrap">
-                <ul>
-                    <li class="subscribe">팝업스토어 신청</li>
-                    <li class="introduction">팝업소개서</li>
-                </ul>
             </div>
-            <section class="slide-section">
-                <div class="section-wrap">
-                    <div class="text-wrap">
-                        <h2 class="slide-tit">ECF POP-UP STORE</h2>
-                        <p class="slide-txt">ECF 팝업스토어 OPEN!</p>
+        </section>
+
+        <main role="main" id="main">
+            <div role="presentation" class="popup-banner-area">
+                <div class="popup-banner-inner">
+                    <picture>
+                        <source srcset="..\popupStore\src\images\sub\popup_m.webp" media="(max-width: 570px)" type="image/webp" />
+                        <!-- <source srcset="image-small.jpg" media="(max-width: 991px)" type="image/webp"> -->
+                        <source srcset="..\popupStore\src\images\sub\popup_min.png" media="(min-width: 1200px)" type="image/png" />
+                        <img src="..\popupStore\src\images\sub\popup_pc.png" alt="ECF 팝업스토어" />
+                    </picture>
+                </div>
+            </div>
+
+            <!-- .main-slide -->
+            <section class="main-slide container-fluid">
+                <div class="row">
+                    <div class="main-text col-12 col-md-6 col-xl-5">
+                        <div class="text-box" data-slide="1">
+                            <div class="hidden-box box01">
+                                <div class="font-slide-title">Think With ECF</div>
+                            </div>
+                            <div class="hidden-box box02">
+                                <div class="font-slide-titleB">Pop-up Store OPEN in HONGDAE</div>
+                            </div>
+                            <div class="hidden-box box03">
+                                <div class="font-slide-subtxt">팝업에서의 제품 판매가 끝이 아닌 글로벌 종합 쇼핑 플랫폼 ECF에서 지속가능성을 확인하세요</div>
+                            </div>
+                            <button type="button" class="btn btn-line font-slide-s-2">팝업스토어 신청<i class="bi bi-arrow-right"></i></button>
+                        </div>
+                        <div class="text-box" data-slide="2">
+                            <div class="hidden-box box01">
+                                <div class="font-slide-title">소비 습관 트렌드의 변화,</div>
+                            </div>
+                            <div class="hidden-box box02">
+                                <div class="font-slide-titleB">새로운 스타일 커머스</div>
+                            </div>
+                            <div class="hidden-box box03">
+                                <div class="font-slide-subtxt">ECF는 고객에게는 합리적인 소비를, 판매자에게는 최고의 판매 경로를 제공하는 One Way 쇼핑 플랫폼으로 전 세계 사용자와 파트너를 연결 합니다.</div>
+                            </div>
+                            <button type="button" class="btn btn-line font-slide-s-2">입점 신청<i class="bi bi-arrow-right"></i></button>
+                            <button type="button" class="btn btn-line font-slide-s-2">매체 소개서<i class="bi bi-arrow-right"></i></button>
+                            <button type="button" class="btn btn-line font-slide-s-2">매체 소개서 - 푸드<i class="bi bi-arrow-right"></i></button>
+                        </div>
+                        <div class="swiper-button-prev"></div>
+                        <div class="swiper-pagination font-main-slide"></div>
+                        <div class="swiper-button-next"></div>
+                    </div>
+                    <div class="swiper main-swiper col-12 col-md-6 col-xl-7">
+                        <div class="swiper-wrapper">
+                            <div class="swiper-slide">
+                                <img class="main-slide-img" src="https://ecfinccompany.cafe24.com/bizdemo145448/img/onepixel/images/main/main-slide1.jpg" />
+                            </div>
+                            <div class="swiper-slide">
+                                <img class="main-slide-img" src="https://ecfinccompany.cafe24.com/bizdemo145448/img/onepixel/images/main/main-slide2.jpg" />
+                            </div>
+                        </div>
                     </div>
                 </div>
-                <div class="slide-wrap">
-                    <div class="slide"></div>
-                </div>
             </section>
+            <!-- //.main-slide -->
 
             <!-- .about-overview -->
             <section class="section about-overview no-visual-section">
                 <div class="container-xl">
                     <!-- .section-main-heading -->
                     <div class="section-main-heading" data-aos="fade-left" data-aos-duration="3000">
-                        <h2>WITH ECF POP-UP</h2>
-                        <h4>ECF 팝업스토어의 장점</h4>
+                        <h2>With ECF Pop-up Store</h2>
                     </div>
                     <!-- .section-main-heading -->
 
