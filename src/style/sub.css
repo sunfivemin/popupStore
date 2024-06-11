@@ -47,8 +47,10 @@
 .ecf-center-row { width: 100%; display: -webkit-box; display: -ms-flexbox; display: flex; align-items: center; -webkit-column-gap: 40px; -moz-column-gap: 40px; column-gap: 40px; } 
 .ecf-center-section .section-sub-heading {margin-bottom: 40px; display: flex; flex-direction: column; align-items: center;}
 .ecf-center-section .section-sub-heading .en-heading { color: #4D4DFF; font-size: 28px; font-weight: 600;  margin-bottom: 20px; margin-bottom: 5px;} 
-.ecf-center-section .section-sub-heading p { font-size: 20px; font-weight: 600; margin-bottom: 0;  letter-spacing: -0.02em;} 
-.ecf-center-section .section-sub-heading h3 { color: #191919; font-size: 48px; font-weight: 900; margin-bottom: 0; } 
+.ecf-center-section .section-sub-heading p { color: #00000; font-size: 20px; font-weight: 600; margin-bottom: 0;  letter-spacing: -0.02em;} 
+.ecf-center-section.place-section.popup-section .section-sub-heading p { color: #fff; font-size: 20px; font-weight: 600; margin-bottom: 0;  letter-spacing: -0.02em;} 
+.ecf-center-section .section-sub-heading h3 { color: #00000; font-size: 48px; font-weight: 900; margin-bottom: 0; } 
+.ecf-center-section.place-section.popup-section .section-sub-heading h3 { color: #fff; font-size: 48px; font-weight: 900; margin-bottom: 0; } 
 .ecf-text-section .heading h4 { font-weight: 700; }
 .ecf-text-section .heading + p { width: 350px; max-width: 100%; }
 
@@ -62,6 +64,7 @@
 .category-section .category-eng {color: #fff; font-size: 20px; text-align: center; font-weight: 400;margin-bottom: 0;}
 .category-section .col {display: flex; flex-direction: column; align-items: center; justify-content: center;}
 
+.ecf-center-section.place-section.popup-section {background-color: #4D4DFF;}
 .ecf-center-section.place-section {background-color: #F8F8F8;}
 .ecf-center-section.event-section .event-cover {display: flex; justify-content: center; align-items: center; width: 100%; height: 380px; background-color: #F3F4F5; border-radius: 16px;}
 .ecf-center-section.event-section .event-txt-wrap {display: flex; flex-direction: column; justify-content: center; align-items: center; }
@@ -93,7 +96,119 @@
 .popupstore-banner .banner-box.popupstore-box .ecf-btn-wrap.ecf-popupstore-wrap .ecf-btn-01 { width: 200px; height: 80px; border-radius: 8px; font-size: 20px; line-height: 80px; color: #191919; background-color: #C8EC00;}
 .popupstore-banner .banner-box.popupstore-box .ecf-btn-wrap.ecf-popupstore-wrap .ecf-btn-02 { width: 200px; height: 80px; border-radius: 8px; font-size: 20px; line-height: 80px; border: 1px solid #ddd; background: #222; color: #ddd;}
 
+.popup-slide {
+    width: 100%; /* 컨테이너의 너비를 100%로 설정 */
+}
 
+.popup-slide .swiper-slide {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 20%; /* 5개의 슬라이드를 한 줄에 보이도록 너비 설정 */
+    /* height: 400px; */
+    background-color: GRAY;
+    font-size: 40px;
+    color: #fff;
+    position: relative;
+    border-radius: 10px;
+}
+
+.popup-slide .swiper-slide.dimmed {
+    opacity: 0.3;
+}
+
+
+.popup-slide .swiper-slide img {
+    display: block;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 10px;
+    background-color: #fff;
+} 
+.popup-slide .swiper {overflow: visible;}
+.popup-slide .swiper-horizontal>.swiper-scrollbar, 
+.swiper-scrollbar.swiper-scrollbar-horizontal {
+    bottom: -20px; left: 10.5%; overflow: visible; right: 0; width: 100%;
+  }
+
+.popup-slide .swiper-scrollbar {background: var(--swiper-scrollbar-bg-color, rgba(255,255, 255, .1));}
+.popup-slide .swiper-scrollbar-drag {background: var(--swiper-scrollbar-drag-bg-color, rgba(255,255, 255, 1));}
+/* .mySwiper {overflow: visible !important;}
+.swiper-slide.swiper-slide-prev {overflow: visible;  opacity: 0.5;backface-visibility: visible;}
+.swiper-container {
+    width: 100%;
+    height: 100%;
+  }
+   */
+  /* .swiper-slide {
+    text-align: center;
+    font-size: 18px;
+    background: #fff;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: -webkit-flex;
+    display: flex;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    -webkit-justify-content: center;
+    justify-content: center;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    -webkit-align-items: center;
+    align-items: center;
+  } */
+
+  /* Add transparency to the previous and next slides */
+
+/* .swiper-button-prev {
+    left: 120px;
+  }
+  .swiper-button-next {
+    right: 120px;
+  } */
+
+  /* .popup-slide .swiper-horizontal>.swiper-scrollbar, .swiper-scrollbar.swiper-scrollbar-horizontal {
+    bottom: -40px; overflow: visible; right: 0; width: 100%;
+  }
+
+ .popup-slide {
+    height: 100%;
+
+}
+
+
+
+.popup-slide .swiper.mySwiper .swiper-wrapper {   right: 0; width: 2000px;}
+
+.swiper-slide {
+    text-align: center;
+    background: #fff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+*/
+
+.circle-button.swiper-button-prev,
+.circle-button.swiper-button-next {
+    position: absolute;
+    border: 1px solid;
+    color: #222;
+    border-radius: 50px;
+    width: 45px;
+    display: block;
+    height: 45px;
+    text-align: center;
+    line-height: 44px;
+}
+
+.circle-button.swiper-button-prev {left: 7%; background: #fff; border-color: #fff;}
+.circle-button.swiper-button-next {right: 7%; background: #fff; border-color: #fff;}
+
+.circle-button.swiper-button-prev:after,.circle-button.swiper-button-next:after  {
+    display: none;
+}
 
  @media (max-width: 767px) {
     .ecf-text-section {max-width: 40%;}
@@ -101,6 +216,7 @@
     .ecf-center-section.event-section .row {flex-direction: column; gap: 20px;}
     .style-section .style-box-wrap > span:nth-child(11) { margin-left: 0;}
     .benefits-section .row {flex-direction: column;}
+    .popup-slide .swiper-slide-prev,.popup-slide .swiper-slide-next {opacity: 0.3;}
  }
 /* *********************************************
  * Hero

@@ -77,9 +77,9 @@
 }
 
 /* popup swiper */
-.popup-slide {
+/* .popup-slide {
     height: 100%;
-    /* background-color: #f5f5f5; */
+
 }
 
 .popup-slide .swiper.mySwiper {
@@ -123,7 +123,7 @@
 
 .circle-button.swiper-button-prev:after,.circle-button.swiper-button-next:after  {
     display: none;
-}
+} */
 /* 메인페이지 공통 */
 #main .main-section {
     margin-top: var(--margin-space);
