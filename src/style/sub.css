@@ -203,8 +203,8 @@
     line-height: 44px;
 }
 
-.circle-button.swiper-button-prev {left: 7%; background: #fff; border-color: #fff;}
-.circle-button.swiper-button-next {right: 7%; background: #fff; border-color: #fff;}
+.circle-button.swiper-button-prev {left: 13%; background: #fff; border-color: #fff;}
+.circle-button.swiper-button-next {right: 13%; background: #fff; border-color: #fff;}
 
 .circle-button.swiper-button-prev:after,.circle-button.swiper-button-next:after  {
     display: none;

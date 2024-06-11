@@ -75,11 +75,11 @@ $(function () {
             },
             900: {
                 slidesPerView: 3.5,
-                spaceBetween: 10,
+                spaceBetween: 20,
             },
             1024: {
-                slidesPerView: 3.8,
-                spaceBetween: 10,
+                slidesPerView: 4.8,
+                spaceBetween: 20,
             },
         },
         observer: true, 
