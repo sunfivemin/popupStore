@@ -130,15 +130,15 @@
     .ecf-center-section .section-sub-heading .en-heading {font-size: 20px;}
     .ecf-center-section .section-sub-heading h3 { font-size: 34px; }
     .ecf-center-section .section-sub-heading p { font-size: 16px; }
-    /* .ecf-img-section {width: 60%;}
-    .ecf-text-section {width: calc(40% - 24px);} */
-
+     .ecf-img-section {width: 50%;}
+     .ecf-text-section { width: 50%; }
+    .ecf-text-section .heading h4 {font-size: 18px;}
+    .ecf-text-section .heading p {font-size: 16px;}
 
 
     .tab-wrap ul {display: flex; flex-direction: column;     }
     .tab-wrap ul li {font-size: 22px; padding: 24px 16px 24px;}
 
-    .ecf-text-section {max-width: 40%;}
     .ecf-center-section .ecf-center-row {-webkit-column-gap: 20px; -moz-column-gap: 20px; column-gap: 20px;}
     .ecf-center-section.event-section .row {flex-direction: column; gap: 20px;}
     .style-section .style-box-wrap > span:nth-child(11) { margin-left: 0;}
