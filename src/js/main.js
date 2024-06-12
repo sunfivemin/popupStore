@@ -48,18 +48,18 @@ $(function () {
         $(".text-box[data-slide='" + currentIndex + "']").addClass("on");
     });
 
-    var mySwiper = new Swiper(".mySwiper", {
-        slidesPerView: 1.5, // 5개의 슬라이드를 한 줄에 보이도록 설정
+    var mySwiper = new Swiper('.mySwiper', {
+        slidesPerView: 1.5,
         spaceBetween: 20,
         loop: true,
         centeredSlides: true,
         pagination: {
-            el: ".main-slide .swiper-pagination",
+            el: '.swiper-pagination',
             clickable: true,
         },
         navigation: {
-            nextEl: ".circle-button.swiper-button-next",
-            prevEl: ".circle-button.swiper-button-prev",
+            nextEl: '.swiper-button-next',
+            prevEl: '.swiper-button-prev',
         },
         scrollbar: {
             el: '.swiper-scrollbar',
@@ -73,16 +73,12 @@ $(function () {
                 slidesPerView: 1.5,
                 spaceBetween: 20,
             },
-            900: {
+            1024: {
                 slidesPerView: 3.5,
                 spaceBetween: 20,
             },
-            1024: {
-                slidesPerView: 4.8,
-                spaceBetween: 20,
-            },
         },
-        observer: true, 
+        observer: true,
         observeParents: true,
         on: {
             init: function() {
@@ -92,30 +88,32 @@ $(function () {
                 updateDimmedSlides(this);
             }
         }
-
     });
 
     function updateDimmedSlides(swiper) {
-        // 모든 슬라이드에서 'dimmed' 클래스를 제거
         swiper.slides.forEach(function(slide) {
-            slide.classList.remove('dimmed');
+            slide.classList.add('dimmed');
         });
-    
-        // 현재 슬라이드의 인덱스를 가져옴
+
         var activeIndex = swiper.activeIndex;
-    
-        // DIM 처리할 슬라이드의 인덱스를 계산
-        var prevIndex1 = (activeIndex - 2 + swiper.slides.length) % swiper.slides.length;
-        var prevIndex2 = (activeIndex - 1 + swiper.slides.length) % swiper.slides.length;
-        var nextIndex1 = (activeIndex + 1) % swiper.slides.length;
-        var nextIndex2 = (activeIndex + 2) % swiper.slides.length;
-    
-        // 중앙의 3개 슬라이드를 제외하고 나머지 슬라이드에 'dimmed' 클래스 추가
-        swiper.slides[prevIndex1].classList.add('dimmed');
-        swiper.slides[prevIndex2].classList.remove('dimmed');
-        swiper.slides[activeIndex].classList.remove('dimmed');
-        swiper.slides[nextIndex1].classList.remove('dimmed');
-        swiper.slides[nextIndex2].classList.add('dimmed');
+        var slidesPerView = swiper.params.slidesPerView;
+
+        var isMobile = window.innerWidth < 1024;
+
+        if (isMobile) {
+            // Mobile: Only center slide is not dimmed
+            var currentIndex = (activeIndex + swiper.slides.length) % swiper.slides.length;
+            swiper.slides[currentIndex].classList.remove('dimmed');
+        } else {
+            // PC: Center 3 slides are not dimmed
+            var prevIndex1 = (activeIndex - 1 + swiper.slides.length) % swiper.slides.length;
+            var currentIndex = (activeIndex + swiper.slides.length) % swiper.slides.length;
+            var nextIndex1 = (activeIndex + 1) % swiper.slides.length;
+
+            swiper.slides[prevIndex1].classList.remove('dimmed');
+            swiper.slides[currentIndex].classList.remove('dimmed');
+            swiper.slides[nextIndex1].classList.remove('dimmed');
+        }
     }
     // 카카오 지도
     //var mapContainer = document.getElementById("map"), // 지도를 표시할 div
