@@ -103,10 +103,10 @@
 .popup-slide .swiper-slide { display: flex; align-items: center; justify-content: center; width: 20%; background-color: GRAY; font-size: 40px; color: #fff; position: relative; border-radius: 10px; } 
 .popup-slide .swiper-slide.dimmed { opacity: 0.3; }
 .popup-slide .swiper-slide img { display: block; width: 100%; height: 100%; object-fit: cover; border-radius: 10px; background-color: #fff; }
-/* .popup-slide .swiper {overflow: visible; width:1490px; max-width: 100%;} */
+.popup-slide .swiper {overflow: visible; max-width: 86%;}
 .popup-slide .swiper-horizontal>.swiper-scrollbar, 
 .swiper-scrollbar.swiper-scrollbar-horizontal { bottom: -30px; left: 0px; overflow: visible; right: 0; width: 100%; }
-.popup-slide .swiper-scrollbar {background: var(--swiper-scrollbar-bg-color, rgba(255,255, 255, .1));}
+.popup-slide .swiper-scrollbar {margin-left: 6.8vw; background: var(--swiper-scrollbar-bg-color, rgba(255,255, 255, .1));}
 .popup-slide .swiper-scrollbar-drag {background: var(--swiper-scrollbar-drag-bg-color, rgba(255,255, 255, 1));}
 .circle-button.swiper-button-prev, .circle-button.swiper-button-next { position: absolute; border: 1px solid; color: #222; border-radius: 50px; width: 45px; display: block; height: 45px; text-align: center; line-height: 44px; }
 .circle-button.swiper-button-prev {left: 2%; background: #fff; border-color: #fff;}
